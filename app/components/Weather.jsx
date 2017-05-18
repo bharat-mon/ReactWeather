@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
+import WeatherForm from 'WeatherForm';
 
 class Weather extends React.Component {
   render() {
     return(
-      <h2>Weather Component</h2>
+      <div>
+        <h1>Get Weather</h1>
+        <WeatherForm />
+      </div>
     );
   }
 }
