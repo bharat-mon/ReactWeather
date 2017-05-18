@@ -1,0 +1,33 @@
+{
+  "name": "react-weather",
+  "version": "1.0.0",
+  "description": "City based React weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n00bMon/ReactWeather.git"
+  },
+  "author": "Bharat Monavarthi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/n00bMon/ReactWeather/issues"
+  },
+  "homepage": "https://github.com/n00bMon/ReactWeather#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^2.5.1"
+  }
+}
