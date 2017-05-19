@@ -8,13 +8,13 @@ import About from 'About';
 import Examples from 'Examples';
 
 ReactDOM.render(
-  <HashRouter>
+  <Router>
     <div>
       <Route path="/" component={Main} />
       <Route exact path="/" component={Weather} />
       <Route path="/about" component={About} />
       <Route path="/examples" component={Examples} />
     </div>
-  </HashRouter>,
+  </Router>,
   document.getElementById("app")
 );
