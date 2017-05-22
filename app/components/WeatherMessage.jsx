@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 
-class WeatherMessage extends React.Component {
-  render() {
+const WeatherMessage = (props) => {
     return(
-      <p>It is {this.props.temp} C in {this.props.location}</p>
+      <p>It is {props.temp} C in {props.location}</p>
     );
-  }
-}
+};
 
 module.exports = WeatherMessage;

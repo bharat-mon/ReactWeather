@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Link, NavLink} from 'react-router-dom';
 
-class Nav extends React.Component {
-  render() {
+const Nav = (props) => {
     return(
       <div>
         <h1>Navigation Component</h1>
@@ -11,7 +10,6 @@ class Nav extends React.Component {
         <NavLink to="/examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</NavLink>
       </div>
     );
-  }
-}
+};
 
 module.exports = Nav;
