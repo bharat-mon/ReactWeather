@@ -6,13 +6,13 @@ module.exports = {
     'script-loader!jquery/dist/jquery.min.js',
     'script-loader!foundation-sites/dist/js/foundation.min.js'
   ],
-  externals: {
-    jquery: 'jQuery'
-  },
+  // externals: {
+  //   jquery: 'jQuery'
+  // },
   plugins: [
     new webpack.ProvidePlugin({
-      '$': 'jquery',
-      'jQuery': 'jquery'
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ],
   output: {
