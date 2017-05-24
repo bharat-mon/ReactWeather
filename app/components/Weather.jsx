@@ -40,10 +40,12 @@ class Weather extends React.Component {
     };
 
     return(
-      <div>
-        <h1>Get Weather</h1>
-        <WeatherForm onSearch={this.handleSearch} />
-        {renderMessage()}
+      <div className="row">
+        <div className="medium-6 large-4 small-centered columns">
+          <h1>Get Weather</h1>
+          <WeatherForm onSearch={this.handleSearch} />
+          {renderMessage()}
+        </div>
       </div>
     );
   }
