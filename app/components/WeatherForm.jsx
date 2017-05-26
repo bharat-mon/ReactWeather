@@ -19,7 +19,7 @@ class WeatherForm extends React.Component {
             {/* React has no autobinding in ES6 classes, so we should define a function for ref for it to work and use this.location.value instead of this.refs.location.value */}
           </div>
           <div>
-            <button>Get Weather</button>
+            <button className="button expanded hollow">Get Weather</button>
           </div>
         </form>
       </div>
