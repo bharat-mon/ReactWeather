@@ -15,7 +15,7 @@ class WeatherForm extends React.Component {
       <div>
         <form onSubmit={this.onFormSubmit}>
           <div>
-            <input type="text" ref={(ref) => this.location = ref} placeholder="Enter city name" />
+            <input type="search" ref={(ref) => this.location = ref} placeholder="Enter city name" />
             {/* React has no autobinding in ES6 classes, so we should define a function for ref for it to work and use this.location.value instead of this.refs.location.value */}
           </div>
           <div>
