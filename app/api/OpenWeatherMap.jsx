@@ -6,14 +6,14 @@ module.exports = {
   getTemp: (location) => {
     let encodedLocation = encodeURIComponent(location);
     let requestURL = `${OPEN_WEATHER_MAP_URL}&q=${encodedLocation}`;
-    return axios.get(requestURL).then((response) => {
-      if(response.data.cod && response.data.message) {
-        throw new Error(response.data.message);
+    return axios.get(requestURL).then((res) => {
+      if(res.data.cod && res.data.message) {
+        throw new Error(res.data.message);
       } else {
-        return response.data.main.temp;
+        return res.data.main.temp;
       }
-    }, (response) => {
-      throw new Error(response.data.message);
+    }, (res) => {
+      throw new Error(res.response.data.message);
     });
   }
 }

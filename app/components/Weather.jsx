@@ -2,31 +2,31 @@ import React, {Component} from 'react';
 import WeatherForm from 'WeatherForm';
 import WeatherMessage from 'WeatherMessage';
 import openWeatherMap from 'openWeatherMap';
+import ErrorModal from 'ErrorModal';
 
 class Weather extends React.Component {
-  constructor(props){   {/* We need to define initialState in a constructor when using ES6 */}
-    super(props);
-    this.state = {
+  state = {
       isLoading: false
-    };
-  }
+    }
 
   handleSearch = (location) => {
     const that = this;
     this.setState({
-      isLoading: true
+      isLoading: true,
+      errorMessage: undefined
     });
+
     openWeatherMap.getTemp(location).then((temp) => {
       that.setState({
         isLoading: false,
         location: location,
         temp: temp
       });
-    }, (errorMessage) => {
+    }, (error) => {
       that.setState({
-        isLoading: false
+        isLoading: false,
+        errorMessage: error.message
       });
-      alert(errorMessage);
     });
   };
 
@@ -39,12 +39,21 @@ class Weather extends React.Component {
       }
     };
 
+    const renderError = () => {
+      if (typeof this.state.errorMessage === 'string') {
+        return (
+          <ErrorModal message={this.state.errorMessage} />
+        );
+      }
+    };
+
     return(
       <div className="row">
         <div className="medium-6 large-4 small-centered columns text-center">
           <h1>Get Weather</h1>
           <WeatherForm onSearch={this.handleSearch} />
           {renderMessage()}
+          {renderError()}
         </div>
       </div>
     );
